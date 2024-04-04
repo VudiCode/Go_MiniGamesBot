@@ -26,7 +26,7 @@ const (
 
 const (
 	telegramAPIURL = "https://api.telegram.org/bot"
-	botToken       = "1295616817:AAHOlgxjXB712AOF3v6SalFx-tU9Vfbp9J4"
+	botToken       = ""
 )
 
 type Update struct {
@@ -157,7 +157,7 @@ func main() {
 					user.totalWins += userUpdate.win
 					user.currentWins += userUpdate.win
 					user.totalDefeats += userUpdate.lose
-					user.currentDefeats += userUpdate.win
+					user.currentDefeats += userUpdate.lose
 
 					resultText = userUpdate.text
 				default:
